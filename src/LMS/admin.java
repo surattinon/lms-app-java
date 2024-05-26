@@ -4,14 +4,6 @@ import javax.swing.*;
 import java.awt.*;
 
 public class admin {
-    int ID;
-    String firstName, lastname;
-
-    admin(int ID, String firstName, String lastname) {
-        this.ID = ID;
-        this.firstName = firstName;
-        this.lastname = lastname;
-    }
 
     public static void menuUI() {
 

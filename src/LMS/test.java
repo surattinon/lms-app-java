@@ -3,10 +3,10 @@ package LMS;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class LibrarySystem {
+public class test {
     private ArrayList<String> books;
 
-    public LibrarySystem() {
+    public test() {
         books = new ArrayList<>();
     }
 
@@ -26,7 +26,7 @@ public class LibrarySystem {
     }
 
     public static void main(String[] args) {
-        LibrarySystem library = new LibrarySystem();
+        test library = new test();
         Scanner scanner = new Scanner(System.in);
 
         while (true) {
