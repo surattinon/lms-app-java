@@ -50,11 +50,13 @@
 
 package LMS;
 import javax.swing.JOptionPane; 
+import LMS.Registration.regPane;
 public class admin {
 	
 	public static void menuUI() {
-		        Object[] options = { "add Books","view Books","issue Book","view issue Book","return Book","logout" }; 
-		        //Object[] options = {"logout","registration","delete librarian", "view librarian", "add librarian"}; 
+		        //Object[] options = { "add Books","view Books","issue Book","view issue Book","return Book","logout" }; 
+		        Object[] options = {"logout","registration","delete librarian", "view librarian", "add librarian"}; 
+	            regPane pane = new regPane();
 
 		  
 		        // Display an option dialog with custom options 
@@ -63,7 +65,7 @@ public class admin {
 		        int choice = JOptionPane.showOptionDialog( 
 		            null, // Parent component (null means center on screen) 
 		            "Do you want to proceed?", // Message to display 
-		            "Custom Options", // Dialog title 
+		            "Library section", // Dialog title 
 		            //JOptionPane.YES_NO_CANCEL_OPTION, // Option type (Yes, No, Cancel) 
 		            JOptionPane.DEFAULT_OPTION, // Option type (Yes, No, Cancel) 
 		            JOptionPane.QUESTION_MESSAGE, // Message type (question icon) 
@@ -75,16 +77,17 @@ public class admin {
 		        
 		        switch (choice) {
 	            case 4:
-	                JOptionPane.showMessageDialog(null, "issue Book");
+	                JOptionPane.showMessageDialog(null, "add Librarian");
 	                break;
 	            case 3:
-					JOptionPane.showMessageDialog(null, "view issue Book");
+					JOptionPane.showMessageDialog(null, "view Librarian");
 					break;
 	            case 2:
-	                JOptionPane.showMessageDialog(null, "view issue Book");
+	                JOptionPane.showMessageDialog(null, "delete Librarian");
 	                break;
 	            case 1:
-	                JOptionPane.showMessageDialog(null, "return Book");
+	                JOptionPane.showMessageDialog(null, "registration");	
+	                pane.regUi();
 	                break;
 	            case 0:
 	                JOptionPane.showMessageDialog(null, "logout");
