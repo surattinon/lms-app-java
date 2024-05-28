@@ -3,14 +3,14 @@ package LMS;
 import java.util.ArrayList;
 import javax.swing.*;
 
-public class LibrarianLists {
+public class librarianlists {
 
     private int ID;
     private String first_name;
     private String last_name;
-    private static ArrayList<LibrarianLists> librarians = new ArrayList<>();
+    private static ArrayList<librarianlists> librarians = new ArrayList<>();
 
-    public LibrarianLists(int ID, String first_name, String last_name) {
+    public librarianlists(int ID, String first_name, String last_name) {
         this.ID = ID;
         this.first_name = first_name;
         this.last_name = last_name;
@@ -40,7 +40,7 @@ public class LibrarianLists {
                 break;
             }
 
-            LibrarianLists librarian = new LibrarianLists(ID, firstNameInput, lastNameInput);
+            librarianlists librarian = new librarianlists(ID, firstNameInput, lastNameInput);
             librarians.add(librarian);
 
             int option = JOptionPane.showConfirmDialog(null, "Do you want to add another librarian?", "Continue", JOptionPane.YES_NO_OPTION);
@@ -53,7 +53,7 @@ public class LibrarianLists {
     public static void main(String[] args) {
         addLibrarian();
         
-        for (LibrarianLists librarian : librarians) {
+        for (librarianlists librarian : librarians) {
             librarian.getLibrarian();
         }
     }
